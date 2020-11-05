@@ -15,3 +15,5 @@ COPY submachine .
 
 RUN export PATH=${PATH}:/opt/compose/bin &&\
     pip3 install -r requirement.txt
+
+
