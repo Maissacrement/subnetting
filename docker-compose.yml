@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  master:
+    image: docker:20.10.0-beta1-dind
+    command: sleep infinity
+    volumes:
+      - "./submachine:/root"
+    networks:
+      - cluster
+
+networks:
+  cluster:
+    ipam:
+      config:
+        - subnet: 172.56.20.0/24
+          gateway: 172.56.20.1
+            
